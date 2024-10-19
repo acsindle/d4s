@@ -2,7 +2,7 @@
     <head>
         <meta charset="UTF-8" />
         <title>This Domain Is For Sale | deguns.com</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
@@ -18,26 +18,42 @@
                 background-size: 400% 400%;
                 -webkit-animation: gradientBG 7s ease infinite forwards;
                 animation: gradientBG 7s ease infinite forwards;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 10px;
             }
             .container {
                 width: 100%;
-                position: absolute;
-                top: 35%;
+                max-width: 600px;
                 text-align: center;
             }
             h1 {
                 font-family: "Protest Riot", sans-serif;
                 font-weight: 400;
-                font-style: normal;
-                font-size: 100px;
+                font-size: clamp(2rem, 5vw, 5rem);
+                margin-bottom: 20px;
             }
             p {
-                font-size: 60px;
+                font-size: clamp(1.5rem, 4vw, 3rem);
                 font-weight: 700;
+                margin-bottom: 20px;
             }
             a {
                 text-decoration: none;
                 color: #212121;
+            }
+            .contact-button {
+                background-color: #fcd34d;
+                padding: 12px 24px;
+                border-radius: 8px;
+                font-size: 1.25rem;
+                font-weight: 600;
+                transition: background-color 0.3s;
+            }
+            .contact-button:hover {
+                background-color: #fbbf24;
             }
             @-webkit-keyframes gradientBG {
                 0% {
@@ -66,9 +82,9 @@
     <body>
         <div class="container">
             <h1>deguns.com is for sale!</h1>
-            <p>Email <b><a href= "mailto: degunscomdomain@gmail.com"> degunscomdomain@gmail.com </a></b> for any inquiries</p>
+            <p>Email <b><a href="mailto:degunscomdomain@gmail.com">degunscomdomain@gmail.com</a></b> for inquiries</p>
             <div class="my-4">
-                <a class="bg-yellow-300 px-8 py-3 rounded hover:bg-yellow-400 transition duration-300" href="mailto:degunscomdomain@gmail.com">Contact Me</a>
+                <a class="contact-button" href="mailto:degunscomdomain@gmail.com">Contact Me</a>
             </div>
         </div>
     </body>
